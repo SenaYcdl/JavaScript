@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+      let x=30;
+      let y=40;
+      let z= "30";
+
+      const compration1 = x == y; //iki degiskeni karsilastiriyoruz esit mi diye soruyoruz 
+      console.log(compration1); //2 esittir kulllaninca sadece degerleri karsilastirir, data tiplerini kontrol etmez
+
+      
+      const compration2 = x == z; //iki degiskeni karsilastiriyoruz, esit mi diye soruyoruz 
+      console.log(compration2);
+
+
+      
+      const compration3 = x === z; //karsilastirma islemleri true ya da false doner
+      console.log(compration3); //ama 3 esittir kullanirsak saglam bir kontrol olur ve data tiplerinin karsilastimasinida yapar
+
+      const compration4 = x > "a"; //x in a dan buyuk oldugunu kontrol edemedigi icin false verir
+      console.log(compration4);
+
+
+      
+
+
+
+        
+    
+        
+    
+        </script>
+</body>
+</html>
