@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+  <h1>Hello World</h1>
+  <p class="desc">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt perferendis
+     cumque rerum esse rem excepturi <b>veritatis</b> beatae quaerat iure itaque vitae nam perspiciatis cum 
+     quibusdam temporibus, eos dolorum sapiente laudantium!
+  </p>
+
+  <ul class="menu">
+    <li>Home</li>
+    <li>About</li>
+    <li>Contact</li>
+  </ul>
+    
+    <script>
+
+     const elH1= document.querySelector("h1"); //bu method dokuman icindeki istedigimiz elemani ilk eslesen ile verir
+     console.log(elH1.innerText); // text i verir
+     console.log(elH1.innerHTML);
+     
+     //const deger degistirmeye izin vermez ama 
+     //elH1 bir obje oldugu icin icindeki propertiyi degistirebiliyoruz
+
+
+     elH1.innerText= "Hello <em>JavaScprit</em>";
+     //bir elementin icindeki yaziyi degistirmek icin kullaniyoruz
+
+     elH1.innerHTML = "Hello <em>JavaScprit</em>";
+     //innerText ve innerHTML farki
+
+     const allLi= document.querySelectorAll(".menu li"); 
+     console.log(allLi);
+
+     const elHome=document.querySelector(".menu li:first-child");
+     elHome.innerText="Ana Sayfa";
+
+
+
+     const elDesc=document.querySelector(".desc");
+     console.log(elDesc.innerText); //get yaparken sadece yaziyi getirir
+     console.log(elDesc.innerHTML); //tum html icerigini getiriyor
+
+
+    
+
+    
+        
+    
+        </script>
+</body>
+</html>
