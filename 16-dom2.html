@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        .red{
+            background-color: antiquewhite;
+        }
+
+        .blue{
+            background-color: aquamarine;
+        }
+
+        .text-center{
+            text-align: center;
+        }
+
+        .text-style{
+            color: bisque;
+            text-shadow: 3px 3px 5px rgb(172, 35, 35);
+            padding: 2rem;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h1>Hello World</h1>
+    <p id="pe1" class="red text-center">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt perferendis
+       cumque rerum esse rem excepturi <b>veritatis</b> beatae quaerat iure itaque vitae nam perspiciatis cum 
+       quibusdam temporibus, eos dolorum sapiente laudantium!
+    </p>
+
+    <script>
+
+let pe1=document.querySelector("#pe1");
+
+
+pe1.classList.add("text-style");
+pe1.classList.remove("red");
+pe1.classList.add("blue");
+console.log(pe1.classList);
+
+    </script>
+
+</body>
+</html>

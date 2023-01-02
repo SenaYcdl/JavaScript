@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+    
+
+    </style>
+
+</head>
+<body>
+
+    <input type="text" id="txtName" value="Veli Bey"/>
+    <h3 id="lblMesaj" >...</h3>
+
+   
+
+    <script>
+
+const txtName= document.querySelector("#txtName");
+const lblMesaj = document.querySelector("#lblMesaj");
+
+//lblMesaj in icindeki texti degistir
+//lblMesaj.innerText= "Merhaba Ali Bey";
+
+//lblmesaj bir h3(html) elementi ama txtName bir form elamani yani kullanicilarin giris yapabildigi bir box
+// bu yuzden bunun value sune ulasmamiz lazim
+lblMesaj.innerText= `Merhaba ${txtName.value}`;
+
+
+
+    </script>
+
+</body>
+</html>
