@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id="txtPrice">
+    <button onclick="calculate()">Calculate</button>
+    <h3 id="result"></h3>
+
+
+    <script>
+
+        //bir elemanin icindeki bir degeri alamk istiyorsak mutlaka document.querySelector kullanmaliyiz
+        //id sini aldigimiz icin # isareti kullanmaliyiz
+        //document.querySelector('#txtPrice') bize input objesini verir
+        //ama icindeki degeri istiyorsak value sunu aliriz ve bunu da price a esitliyoruz
+
+        function calculate(){
+
+            let price = document.querySelector('#txtPrice').value;
+            let discount;
+
+
+            if(price > 500){
+               discount = 10;
+
+            }
+            else {
+                discount = 5;
+            }
+
+            price = price - price * discount / 100;
+
+
+            document.querySelector("#result").innerHTML = `$${price}`;
+
+
+        }
+
+    </script>
+
+</body>
+</html>

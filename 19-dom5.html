@@ -15,7 +15,7 @@
 </head>
 <body>
 
-    //oninput intup da birsey degisince calisir
+    
     <input type="text" id="txtName" value="Veli Bey" oninput="sayHello()"/>
 
     <h3 id="lblMessage" >...</h3>
@@ -24,9 +24,13 @@
 
     <script>
 
+        const lblMessage= document.querySelector("#lblMessage");
+        const txtName = document.querySelector("#txtName");
+
 function sayHello(){
 
-    document.querySelector("#lblMessage").innerHTML = document.querySelector("#txtName").value;
+
+  lblMessage.innerHTML = txtName.value;
 
 
 }
