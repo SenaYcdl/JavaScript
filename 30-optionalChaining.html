@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      background-color: rgb(214, 195, 214);
+    }
+
+    button {
+      background-color: rgb(245, 185, 205);
+    }
+  </style>
+  <body>
+    <button onclick="setUserInfo()">Click Me</button>
+
+    <h3 id="result"></h3>
+    <script>
+      const user1 = {
+        name: "Jane",
+        age: 21,
+        salary: 15000,
+        phone: {
+          gsm: "23243536",
+          line: "12342443536",
+        },
+      };
+
+      const user2 = {
+        name: "John",
+        age: 21,
+      };
+
+      function setUserInfo() {
+        const newSalary = user1.salary * 1.15;
+        const phone = user1.phone.gsm;
+        console.log(`Sn. ${user1.name} yeni maasiniz ${newSalary} olmustur`);
+
+       // if (user2 && user2.phone && user2.phone.gsm) {
+       //   const phone = user2.phone.gsm;
+
+       //if blogunu optional ile yaptık
+       const phone2=user2?.phone?.gsm;
+       //eger user2 nin phone yoksa hata verme
+       
+
+
+      }
+    </script>
+  </body>
+</html>

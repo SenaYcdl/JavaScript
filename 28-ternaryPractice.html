@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="number" id="txtPrice"><br>
+
+    <input type="radio" 
+    name="type" id="rdWorker"  
+    value="worker" 
+    onchange="calculate()"
+    />
+
+    <label for="rdWorker">Calisan</label><br>
+
+    <input type="radio" 
+    name="type" 
+    id="rdRetired" 
+    value="retired" 
+    onchange="calculate()"
+    />
+    
+    <label for="rdRetired">Emekli</label>
+
+    <h3 id="result"></h3>
+
+    <script>
+
+        function calculate(){
+          const myType = document.querySelector("input[name='type']:checked").value;
+          let price = document.querySelector("#txtPrice").value;
+
+          price = myType === "worker" ? price * 0.95 : price * 0.90;
+
+          document.querySelector("#result").innerHTML = price;
+
+            
+
+        }
+</script>
+    
+</body>
+</html>
