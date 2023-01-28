@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="txtNumber" />
+    <button onclick="handleCalculateClick()">Calculate</button>
+    <h4 id="result"></h4>
+
+    <script>
+      //function programda tekrar tekrar calistirilabilecek alt prog denir
+      //butona tiklandiginde calisan event
+      //calculate butonuna bagımli bir fonksiyon
+      //direk bagimli
+
+      function handleCalculateClick() {
+        const num = document.querySelector("#txtNumber").value;
+
+        const result = calculateFactoriel(num);
+        //num u calculatefac gonderdim
+        //asagida islemi yapip result doner
+
+        document.querySelector("#result").innerHTML = `${num}! =${result}`;
+      }
+
+      //butona tikladigimizda birsey cagirmak lazim
+      //dry proglamlama prensibi(Don't repeat yourself)
+      //bir class bir modul sadece birsey yapsin
+      //generic bir fonksiyon
+
+
+      function calculateFactoriel(val) {
+        let num = isNaN(val + 1) ? 0 : Number(val);
+        num = num === 0 ? 1 : num;
+
+        let factoriel = 1;
+
+        do {
+          factoriel *= num;
+          num--;
+        } while (num > 1);
+
+        return factoriel;
+      }
+
+      alert(calculateFactoriel(10));
+
+      //fonksiyon bu ornekdeki gibi olmali yani hicbir yere bagimli olmamali ne deger verirsek onu almali ve icinde 
+      //bir islem yapmali ve onu dondurmeli
+
+      //solid prensiplerden bir tanesi de Single Responsability Principle dir
+      //yani bir class,bir modul,bir function sadece bir is yapmali prensibini icerir
+
+    </script>
+  </body>
+</html>

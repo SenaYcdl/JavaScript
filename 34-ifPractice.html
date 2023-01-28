@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+        #product-list span{
+            font-weight: bold;
+
+        }
+    </style>
+  </head>
+  <body>
+    <input type="text" id="txtRate" />
+    <button onclick="calculate()">Update</button>
+
+    <ul id="product-list">
+      <li>Notebook <span>1500</span> $</li>
+      <li>Monitor <span>500</span> $</li>
+      <li>Keybord <span>10</span> $</li>
+      <li>Mouse <span>5</span> $</li>
+      <li>Sound Cart <span>150</span> $</li>
+    </ul>
+
+    <script>
+      function calculate() {
+        let rate = document.querySelector("#txtRate").value;
+
+        //rate = rate * 1 ? rate : 0;
+        rate = !isNaN(rate) ? rate : 0;
+
+        //listedeki tum elemanlari secrek eleman eleman sayisini aldik
+        const list = document.querySelectorAll("#product-list li");
+        //console.log(list.length);
+
+        for (let i = 1; i <= list.length; i++) {
+          const elPrice = document.querySelector(
+        `#product-list li:nth-child(${i}) span`
+          );
+
+          let price = Number(elPrice.innerHTML);
+          console.log(price);
+          price = price + (price * rate) / 100;
+          console.log(price);
+          elPrice.innerHTML = price.toFixed(1);  //virgulden sonra gostermek istedigimizi secer
+
+        }
+
+        // console.log(document.querySelector("ul li:nth-child(1)").innerHTML);
+        //ul icindeki birinci elemani getir
+      }
+    </script>
+  </body>
+</html>

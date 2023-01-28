@@ -8,21 +8,27 @@
   </head>
   <body>
     <button onclick="">Click Me</button>
-
     <h3 id="result"></h3>
 
     <script>
-      
-      const x = null;
+      //sadece null ve ındefined durumlari kontrol ederek
+      //buna gore aksiyon almamizi saglayan bir operatordur.
+      //eger ilk parametre null veya undefined degilse
+      //ilk parametreyi yoksa ikinci parametreyi dondurur
+      //const x = null;
+      //if (x) {
+      //  console.log("degisken null, undefined ,nan , 0, degil");
+      // } else {
+      //   console.log("degiskenin degeri null , undefined,nan ,0 '' ");
 
-     if(x){
-      console.log("Degisken null, undefined, nan, 0, '', degil");
-     }
-     else{
-      console.log("Degiskenin degeri null, undefined, nan, 0, ''");
-     }
+      const x = 5;
 
+      alert(x || "Anonymous");
 
+      //x or true oldugu icin direk 5 verdi
+      //x 0 olmasydi anon verdi x false oldugu icin son degeri doner
+
+      alert(x ?? "Anonymous");
     </script>
   </body>
 </html>

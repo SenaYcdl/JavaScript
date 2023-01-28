@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="txtNumber" />
+    <button onclick="calculate()">Calculate</button>
+
+    <script>
+      function calculate() {
+        let num = document.querySelector("#txtNumber").value;
+        let total = 0;
+        num = isNaN(num + 1) ? 0 : num;
+        num = Math.abs(num);
+
+        //5327 her bir elemanina ulasmak icin
+        //532,7
+        //53,2
+        //53
+        //5
+        //0.5
+
+        while (num > 0) {
+          const digit = num % 10;
+          total += digit;
+          num = Math.floor(num / 10); //Math.floor(x)en yakın tamsayıya yuvarlanmış x değerini döndürür :
+        }
+
+        alert(total);
+      }
+    </script>
+  </body>
+</html>
