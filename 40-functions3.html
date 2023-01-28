@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="number" id="txtNum" placeholder="Type a number" />
+    <button onclick="onCalculateClick()">Calculate</button>
+    <h4 id="result"></h4>
+
+    <script>
+
+    //arrow function yontemi
+
+    const sum4 = (a, b) => a + b;
+
+      const sum3 = (a, b) => {
+        return a + b;
+      };
+
+
+      //expression yontemi
+
+      const sum2 = function (a,b) {
+
+        return a + b ;
+      };
+
+
+      //geleneksel yontem
+      function sum1(a, b) {
+        return a + b;
+      }
+
+      //bu bir degisken 
+      console.log(sum4(5,7));
+
+
+
+
+    </script>
+    
+</body>
+</html>

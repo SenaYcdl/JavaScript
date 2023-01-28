@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" id="txtYear" placeholder="Type your birth year" />
+    <button onclick="onCalculateClick()">Calculate</button>
+    <h4 id="result"></h4>
+
+    <script>
+      //z global
+      //global scope her yerden erişelebilir
+
+      let z = 15; //ilk calisir
+      var m = 12;
+
+      const test1 = () => {
+        let x = 40;
+        //function scope sadece fonction icinden ulasilabilir
+        console.log(`x degiskeninin degeri: ${x}`);
+        console.log(`z degiskeninin degeri: ${z}`);
+      };
+
+      const test2 = () => {
+        let x = 33;
+        let z = 11;
+        var m = 23;
+        g = 33; //js tanimlanmamis degiskenleri global kabul eder
+        if (x > 20) {
+          let y = 15;
+          y += 10;
+          var t = 22;
+        }
+
+        // console.log(y); erisemedik
+        console.log(z);
+        console.log(m);
+        console.log(t); //sadece bulundugu scope icinde ulasilabilir
+      };
+
+      const test3 = () => {
+        console.log(z);
+        console.log(m);
+      };
+
+      //hata var
+      //console.log(`x degiskeninin degeri: ${x}`);
+      //console.log(`z degiskeninin degeri: ${z}`);
+      test1();
+      test2();
+      test3();
+    </script>
+  </body>
+</html>

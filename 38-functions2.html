@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" id="txtYear" placeholder="Type your birth year" />
+    <button onclick="onCalculateClick()">Calculate</button>
+    <h4 id="result"></h4>
+
+    <script>
+      
+      //functions nedir?
+      //programda tekrar tekrar calistirilabilecek alt programlara denir
+      //kod tekrarinin onune gecer
+      //problemler kucuk parcalara ayrilarak daha kolay cozulur
+      //hata ayiklama daha kolay olur
+
+
+      function onCalculateClick(){
+
+
+        const age=document.querySelector("#txtYear").value;
+        document.querySelector("#result").innerHTML=getAge(age);
+        getAge(age);
+
+
+      }
+
+      function getAge(year){
+
+        if (!year || isNaN(+year)) return;
+
+        const dateTime = new Date();
+        const currentYear = dateTime.getFullYear();
+
+        if (currentYear<year) return;
+
+        const age = currentYear - year;
+
+        return age;
+
+      }
+
+
+      console.log(getAge(1980));
+      console.log(getAge("merhaba"));
+      console.log(getAge());
+      console.log(getAge(""));
+      console.log(getAge(2100));
+      
+
+    
+
+    </script>
+  </body>
+</html>
