@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+
+ //data bu modelde gelir json modele cok yakindir
+      //bunlari alip manipule ederiz
+      const car = {
+        id: "123",
+        brand: "mercedes",
+        model: "S500",
+        color: "blue",
+        age: 2020,
+        driver: {
+          name: "Ali",
+          birthDate: "1998",
+        },
+      };
+
+      const bus = {};
+
+      console.log(car);
+      console.log(typeof car);
+      console.log(car.model);
+      console.log(car.driver.name);
+      car.age = 2022;
+      console.log(car.age);
+
+      if (bus) {
+        console.log("test1");
+      } else {
+        console.log("test2");
+      }
+
+      //Bir object in icinin dolu ulıp olmadigi nasil anlasilir
+
+      console.log(Object.keys(bus).length);
+      console.log(Object.keys(car).length);
+
+
+
+    </script>
+    
+</body>
+</html>

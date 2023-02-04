@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        
+        const cities = ["Ankara", "Istanbul", "Izmir"];
+  
+        const countries = ["USA", "France", "Germany", "Netherland"];
+        //const elemanlari ile yapilan degisikliklere karismaz
+  
+        console.log(cities);
+        console.log(typeof cities);
+        console.log(cities[2]); //dizi elemanlarina erisim icin index no kullanilir
+        console.log(cities.length); //dizinin eleman sayisi
+  
+        console.log(cities[cities.length - 1]);
+        console.log(countries[countries - 1]);
+        console.log(countries[4]); //undefined
+  
+        countries[1] = "Italy";
+  
+        // countries="Hello";  hata verir const
+  
+        console.log(countries);
+      </script>
+    
+</body>
+</html>
