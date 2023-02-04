@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+//block scope
+//bu degiskenler sadece bulunduklari {} blok icinde gecerlidir.
+//block disinda erisim yapilamaz
+//ve sadece let ve const icin gecerlidir
+
+//var ile let arasindaki en onemli fark,scope farkliligidir
+//var function scope, let block scope olarak davranir
+
+
+function test() {
+        var a = "Hello";
+        let b = "World";
+
+        if (true) {
+          var x = "Ankara"; //x function scope
+          let y = "Izmir"; //y block scope
+        }
+
+        console.log(a, b, x); //Hello World Ankara
+        console.log(y); //hata verir undefined
+      }
+
+
+
+
+    </script>
+    
+</body>
+</html>

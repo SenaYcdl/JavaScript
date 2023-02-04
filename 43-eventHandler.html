@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="onClick1()">Click 1</button>
+    <button id="btn2">Click 2</button>
+    <button id="btn3">Click 3</button>
+    <button id="btn4">Click 4</button>
+    <button id="btn5">Click 5</button>
+    <button id="btn6">Click 6</button>
+
+    <script>
+      //1. yontem
+      function onClick1(e) {
+        alert("1.butona tiklandi");
+      }
+
+      //2. yontem
+      function onClick2(e) {
+        alert("2.butona tiklandi");
+      }
+
+      document.querySelector("#btn2").onclick = onClick2;
+
+      //kullanicinin butona tiklamasi bir event dir
+      //kullanici click yaptiginda onClick calisir
+      //event i yakalayan event handler dir
+
+      //3. yontem
+
+      document.querySelector("#btn3").onclick = function (e) {
+        //onclick event kistener
+        alert("3.butona tiklandi"); //function event handler
+      };
+
+      //4. yontem
+      document.querySelector("#btn4").onclick = (e) => {
+        alert("4.butona tiklandi");
+      };
+
+      //5. yontem
+      const onClick5 = (e) => {
+        alert("5. butona tiklandi");
+      };
+      document.querySelector("#btn5").addEventListener("click", onClick5);
+
+      //6. yontem
+      //en cok kullanilan
+      //once objeyi sec
+      //sonra addeventListener methodunu kullan iki tane parametre gonder
+      //1.si olayin adi 2.o olay oldugu zaman ne yapmak istiyosun onu yazacagimiz fonksiyon
+      
+      document.querySelector("#btn6").addEventListener("click", (e) => {
+        alert("6. butona tiklandi");
+      });
+    </script>
+  </body>
+</html>
