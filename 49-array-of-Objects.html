@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        const cars = [
+          {
+            id: 5,
+            model: "Kia",
+            doors: 4,
+            seats: 5,
+            luggage: 300,
+            transmission: "Manuel",
+            airConditioning: true,
+            age: 5,
+            priceHour: 20,
+            fuelType: "Gasoline",
+            image: ["79b8932bn-88d0-4afd-9ddd-3782dhjkasd"],
+            builtIn: true,
+          },
+
+          {
+            id: 6,
+            model: "Ford",
+            doors: 4,
+            seats: 5,
+            luggage: 300,
+            transmission: "Manuel",
+            airConditioning: true,
+            age: 3,
+            priceHour: 20,
+            fuelType: "Diesel",
+            image: ["79b8932bn-88d0-4afd-9ddd-3782dhjkasd"],
+            builtIn: true,
+          },
+
+        ];
+  
+        console.log(cars[1].model);
+  
+        for (let i = 0; i < cars.length; i++) {
+          if (cars[i].id === 6) {
+            console.log(cars[i].model);
+          }
+          
+        }
+  
+        //Mutator Methods
+        //push => dizinin sonuna bir veya daha fazla
+        //eleman ekler ve dizinin yeni eleman sayisini dondurur
+        //pop => dizinin son elemanini diziden siler ve onu dondurur
+        //shift => dizinin ilk elemanini diziden siler ve onu dondurur
+        //unshift => dizinin ilk indeksine yeni bir eleman ekler
+        //ve dizinin yeni eleman sayisini dondurur
+        //sort => diziyi yükselen sirada siralar
+        //reverse => dizinin elemanlarini ters siralar
+        //splice => dizinin iceriklerini yeni ogeler ekleyerek
+        //mevcut ogeleri silerek gunceller
+      </script>
+    
+</body>
+</html>

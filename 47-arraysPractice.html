@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id="btnFind">Find the biggest number</button>
+
+<script>
+
+const arr = [12 , 45, 6, 23, 676, 2, 1];
+
+document.querySelector("#btnFind").addEventListener("click", ()=> {
+    const maxNumber = getMaxNumber(arr);
+    alert(`En buyuk sayi ${maxNumber}`);
+
+
+});
+
+
+const getMaxNumber = (a) => {
+
+    if (!a && typeof a !== "object" && a.length <= 0) return;
+
+    let maxNum= a [0];
+
+    for(let i =1; i<a.length; i++){
+
+//i dongu icinde devam edecek
+
+if (maxNum < a[i]) maxNum = a[i]; //12, 45 den kucuk mu 45 i al
+
+
+//a[4] e kadar dongu devam eder 676 alir
+//2 yi ve 1 i de kontrol eder en buyuk sayiyi aldi
+
+}
+
+
+return maxNum;
+//return fonksiyonlarda cagirildigi yere
+//return ettigimiz degeri aynen gonderiyor
+
+};
+
+
+
+
+
+</script>
+
+</body>
+</html>
